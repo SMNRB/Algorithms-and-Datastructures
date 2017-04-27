@@ -1,6 +1,3 @@
-// Queue.cpp : Definiert den Einstiegspunkt f¸r die Konsolenanwendung.
-//
-
 #include "Queue_Header.h"
 
 struct queue
