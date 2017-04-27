@@ -27,44 +27,6 @@ queue* queue_create()
 	return newQueue;
 }
 
-void queue_enqueueRec(node* n, int d)
-{
-	if (n->next == NULL)
-	{
-		node* temp = (node*)malloc(sizeof(node));
-		temp->next = NULL;
-		temp->value = d;
-
-		n->next = temp;
-	}
-	else
-	{
-		queue_enqueueRec(n->next, d);
-	}
-}
-
-// Complexity O(n)
-void queue_enqueue(queue* q, int d)
-{
-	if (q == NULL)
-		return NULL;
-
-	if (q->size == 0)
-	{
-		node* temp = (node*)malloc(sizeof(node));
-		temp->next = NULL;
-		temp->value = d;
-
-		q->start = temp;
-	}
-	else
-	{
-		queue_enqueueRec(q->start, d);
-	}
-
-	q->size += 1;
-}
-
 // Complexity O(1)
 void queue_enqueue1(queue* q, int d)
 {
