@@ -40,7 +40,7 @@ unsorted_btree_node* node_create(void* d)
 	return myNode;
 }
 
-bool btree_insertRec(unsorted_btree_node n, void d)
+bool btree_insertRec(unsorted_btree_node n, void* d)
 {
 	if (n == NULL)
 		return false;
@@ -71,7 +71,7 @@ bool btree_insertRec(unsorted_btree_node n, void d)
 	}
 }
 
-bool btree_insert(unsorted_btree t, void d)
+bool btree_insert(unsorted_btree t, void* d)
 {
 	if (t == NULL)
 		return false;
