@@ -23,3 +23,19 @@ public class HashMain {
 	}
 
 }
+
+
+/* Output:
+	Not compressed:
+	2280020
+	2279572
+	89677
+	724048543
+	Compressed:
+	51002
+	50554
+	89677
+	22969
+	0
+
+*/
